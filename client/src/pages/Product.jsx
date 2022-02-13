@@ -1,113 +1,52 @@
-import { Add, Remove } from "@material-ui/icons";
-import styled from "styled-components";
+
+import './product.css';
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter"
 
-const FilterTitle = styled.span`
-  font-size: 1rem;
-  font-weight: 200;
-`;
-
-const FilterColor = styled.div`
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-  margin: 0rem 0.5rem;
-  cursor: pointer;
-`;
-
-const FilterSize = styled.select`
-  margin-left: 1rem;
-  padding: 0.5rem;
-`;
-
-const FilterSizeOption = styled.option``;
-
-const AmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-`;
-
-const Amount = styled.span`
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
-  border: 0.1rem solid teal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0rem 0.5rem;
-`;
-
-const Button = styled.button`
-  padding: 1rem;
-  border: 2px solid teal;
-  background-color: white;
-  cursor: pointer;
-  font-weight: 500;
-  &:hover {
-    background-color: #f8f4f4;
-  }
-`;
 
 const Product = () => {
-  return (
+return  (
     <div>
-      <Announcement />
+        <Announcement />
       <Navbar />
-      <div className="row w-100">
-        <div className="col-sm-6 col-md-4 d-flex justify-content-center h-100">
-          <img
-            src="https://i.ibb.co/S6qMxwr/jean.jpg"
-            className="w-100" alt=""
-          />
-        </div>
-        <div className="col-sm-6 col-md-8">
-          <h1>Denim Jumpsuit</h1>
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </p>
-          <h1 className="mt-4">$ 20</h1>
-          <div className="d-flex justify-content-between mt-5">
-            <div className="d-flex justify-content-center align-items-center">
-              <FilterTitle className="mx-2">Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
-            </div>
-            <div>
-              <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
-              </FilterSize>
-            </div>
+        <div class="wrapper">
+        
+        <div className="card text-center">
+          
+        <button class="icon"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg></button>
+        
+        <div   class="card-body">
+              <h6 class="card-title"><b> <br /><br /><br /><br /><br /><br /><br /><br />Description: </b><br />
+               Blue solid denim basic Full Sleeves jumpsuit.<br /><br /><br /><br />
+            </h6> 
           </div>
-          <div className="d-flex justify-content-between align-items-center mt-4">
-            <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
-            </AmountContainer>
-            <Button className="text-nowrap">ADD TO CART</Button>
+
+          <div className="image"> <img src="https://i.ibb.co/S6qMxwr/jean.jpg" width={300} alt=""/> </div>
+          <div className="about-product text-center">
+          
+            <h3>Denim Jumpsuit</h3>
+         <div>  <h6>
+            <span class=" fa fa-star checked"></span>
+            <span class=" fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            Rating
+            </h6> 
+            </div>                   
+                <h4>Rs499</h4>
+            <button className="fa fa-arrow-left"></button>
+             <button className="btn btn-success buy-now">Buy Now</button>
+            <button className="fa fa-arrow-right"></button>
           </div>
-        </div>
-      </div>
-      <Newsletter />
+          </div>
+          </div>
+        <Newsletter />
       <Footer />
-    </div>
-  );
-};
+      </div>
+    );
+  };
 
 export default Product;
