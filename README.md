@@ -3,15 +3,16 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 ![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
-![GitHub forks](https://img.shields.io/github/watchers/Craftsmen-GDSC/craftsmen?label=watch)
-![GitHub forks](https://img.shields.io/github/forks/Craftsmen-GDSC/craftsmen?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/Craftsmen-GDSC/craftsmen?color=red&style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/Craftsmen-GDSC/craftsmen?style=normal)
-![GitHub language count](https://img.shields.io/github/languages/count/Craftsmen-GDSC/craftsmen?style=normal)
-![GitHub top language](https://img.shields.io/github/languages/top/Craftsmen-GDSC/craftsmen?style=normal)
+![GitHub forks](https://img.shields.io/github/forks/Diversion2k22/craftsmen?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/Diversion2k22/craftsmen?color=red&style=social)
+![Lines of code](https://img.shields.io/tokei/lines/github/Diversion2k22/craftsmen?color=red&label=Lines%20of%20Code)
+![GitHub repo size](https://img.shields.io/github/repo-size/Diversion2k22/craftsmen?style=normal)
+![License](https://img.shields.io/bower/l/react?color=green)
+![Stars](https://img.shields.io/github/stars/Diversion2k22/craftsmen?style=flat&logo=github)
+![GitHub language count](https://img.shields.io/github/languages/count/Diversion2k22/craftsmen?style=normal)
+![GitHub top language](https://img.shields.io/github/languages/top/Diversion2k22/craftsmen?style=normal)
 
 </div>
-
 
 <p align = "center">
     <img src="./client/src/assets/Craftsmen.png" />
@@ -73,3 +74,11 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/Vivek-kumar21"><img src="https://avatars.githubusercontent.com/u/92684075?v=4" width="100px;" alt=""/><br /><sub><b>Vivek</b></sub></a><br /></td>
   </tr>
 </table>
+
+# Follow Us
+<a href="https://twitter.com/CraftsmanO" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="rohan51316422" height="30" width="40" /></a>
+<a href="https://www.facebook.com/craftsmen.gdsc.iem" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="rohanism26" height="30" width="40" /></a>
+<a href="https://www.instagram.com/craftsmen_gdsc/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="rohanism26" height="30" width="40" /></a>
+
+# For Updates Message Us
+<a href="https://wa.me/917044948954" target="blank"><img src="https://img.icons8.com/office/40/000000/whatsapp--v2.png"/></a>
