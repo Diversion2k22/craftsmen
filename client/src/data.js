@@ -1,24 +1,35 @@
 export const sliderItems = [{
         id: 1,
-        img: "https://i.ibb.co/XsdmR2c/1.png",
-        title: "SUMMER SALE",
-        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "f5fafd",
+        img: "https://images.unsplash.com/photo-1506152983158-b4a74a01c721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80",
+
+        title: "Summer Sale",
+        desc: "Don't Compromise On Style! Get Flat 30% OFF for New Arrivals!",
+        isActive: true,
     },
     {
         id: 2,
-        img: "https://i.ibb.co/DG69bQ4/2.png",
-        title: "AUTUMN COLLECTION",
-        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "fcf1ed",
+        img: "https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+
+        title: "Autumn Collections",
+        desc: "Fall..The Colors Leave You Breathless, it's Autumn On Our Minds.",
+        isActive: false,
     },
     {
         id: 3,
-        img: "https://i.ibb.co/cXFnLLV/3.png",
-        title: "LOUNGEWEAR LOVE",
-        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "fbf0f4",
+        img: "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+
+        title: "Loungewear Love",
+        desc: "Make yourself fit in gym wear, never go out of style!",
+        isActive: false,
     },
+    {
+      id: 4,
+      img: "https://images.unsplash.com/photo-1584065736070-43a079541a71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+
+      title: "Love For Crafts",
+      desc: "Make yourself fall in love with our dear artists!",
+      isActive: false,
+  },
 ];
 
 export const categories = [{
