@@ -37,14 +37,14 @@ nav, p {
 
 .carousel-caption h1 {
     font-family: 'Merienda', cursive;
-    font-size: 4em;
+    font-size: 3.7rem;
     font-weight: 700;
     color: #FFF;
     text-transform:capitalize;
 }
 
 .carousel-caption h3 {
-    font-size: 20px;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: #FFF;
     /* text-transform: uppercase; */
