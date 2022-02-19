@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/#"><img style={{width:'3rem'}} src={logo} alt="logo" /></Link>
+                <Link className="navbar-brand" to={`/`}><img style={{width:'3rem'}} src={logo} alt="logo" /></Link>
                 <button className="navbar-toggler bg-secondary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <MenuOutlined />
                 </button>
@@ -32,13 +32,13 @@ const Navbar = () => {
                             </ThemeContext.Consumer>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="#"><ShoppingCartOutlined /></Link>
+                            <Link className="nav-link" aria-current="page" to={`/#`}><ShoppingCartOutlined /></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">REGISTER</Link>
+                            <Link className="nav-link" to={`/register`}>REGISTER</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-nowrap" to="#" aria-disabled="true">SIGN IN</Link>
+                            <Link className="nav-link text-nowrap" to={`/login`} aria-disabled="true">SIGN IN</Link>
                         </li>
                     </ul>
                     <form className='d-flex align-items-center'>
