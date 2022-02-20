@@ -36,10 +36,13 @@ return  (
             Rating
             </h6> 
             </div>                   
-                <h4>Rs499</h4>
+              <button className="price1">₹800<br /><small>1 pc</small></button>
+              <button className="price2">₹1800<br /><small>3 pc</small></button>
+              <br />
             <button className="fa fa-arrow-left"></button>
              <button className="btn btn-success buy-now">Buy Now</button>
             <button className="fa fa-arrow-right"></button>
+            
           </div>
           </div>
           </div>

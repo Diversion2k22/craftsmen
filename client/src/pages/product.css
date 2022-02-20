@@ -11,7 +11,7 @@
 .card {
     height: 420px;
     width: 70vw;
-    background-color: #C62828;
+    background-color: #8bd3cd;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -26,7 +26,7 @@
     height: 100%;
     content: "";
     top: -50%;
-    background-color: #EF5350;
+    background-color: #e2dd76;
     transform: skewY(345deg);
     transition: 1s ease-in
 }
@@ -57,7 +57,7 @@
 
 .about-product {
     position: absolute;
-    color: rgb(24, 15, 15);
+    color: rgb(0, 0, 0);
     bottom: -110px;
     margin-left: 0vw;
     justify-items: center;
@@ -70,21 +70,21 @@
 }
 
 .buy-now {
-    color: rgb(255, 255, 255);
-    background-color: #ef5350;
-    border-color: #ef5350;
+    color: rgb(0, 0, 0);
+    background-color: #d8cb1b;
+    border-color: #000000;
     width: 160px;
     margin-top: 10px;
 }
 
 .buy-now:focus {
-    box-shadow: none
+    box-shadow: none;
 }
 
 .buy-now:hover {
     color: #fff;
-    background-color: #e84040;
-    border-color: #e84040
+    background-color: #8940e8;
+    border-color: #000000
 }
 
 .checked {
@@ -106,4 +106,27 @@
 
 .icon {
     position: absolute;
+    
+}
+.icon:focus {
+    position:absolute;
+    color: #ff0000;
+}
+
+.price1 {
+    width: 70px;
+    background-color: #61dacf;
+}
+
+.price1:focus {
+    background-color: grey;
+}
+
+.price2 {
+    width: 70px;
+    background-color: #61dacf;
+}
+
+.price2:focus {
+    background-color: grey;
 }
