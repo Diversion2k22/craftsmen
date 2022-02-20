@@ -1,0 +1,88 @@
+/* <i class="fa-solid fa-bars"></i> */
+#main-navbar {
+  background-color: #121013;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.navbar-top-area {
+  text-align: center;
+  padding: 0.7rem 0;
+  font-size: 0.8rem;
+  color: rgb(188, 194, 204);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-mid-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid #333;
+  border-bottom: 0.01rem solid #333;
+}
+.navbar-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+.navbar-icons-styling {
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar-icons-styling:link,
+.navbar-icons-styling:visited {
+  color: #fff;
+}
+.navbar-icons-styling:hover,
+.navbar-icons-styling:active {
+  color: #868e96;
+}
+
+.navbar-mid-heading {
+  font-weight: 700;
+  color: #d4ac2b;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.navbar-mid-small-heading {
+  font-size: 0.6rem;
+  text-align: center;
+}
+.navbar-bottom-area {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.8rem;
+}
+.navbar-menu-item-container {
+  padding: 0.6rem;
+  border-bottom: 2px solid #000;
+}
+.navbar-menu-item-container:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+.navbar-menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 850px) {
+  .navbar-bottom-area {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 576x) {
+  .navbar-bottom-area {
+    font-size: 0.7rem;
+  }
+}

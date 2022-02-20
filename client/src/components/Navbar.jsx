@@ -1,56 +1,125 @@
-import { MenuOutlined, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react';
-import logo from '../assets/logo.png'
-import {ThemeContext,themes} from '../Context/ThemeContext';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import Searchbar from './Searchbar';
+import Sidebar from './Sidebar';
+import './Navbar.css';
+import logo from '../assets/logo.png';
 
-const Navbar = () => {
-    const [darkMode, setDarkMode] = React.useState(true);
-    return (
-        <nav className="navbar navbar-expand-sm">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to={`/`}><img style={{width:'3rem'}} src={logo} alt="logo" /></Link>
-                <button className="navbar-toggler bg-secondary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <MenuOutlined />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
-                        <li className="nav-item">
-                            <ThemeContext.Consumer>
-                            {({ changeTheme }) => (
-                                <button
-                                    className='btn shadow-none'
-                                    color="link"
-                                    onClick={() => {
-                                    setDarkMode(!darkMode);
-                                    changeTheme(darkMode ? themes.light : themes.dark);
-                                    }}
-                                >
-                                    <i className={darkMode ? 'bi fa-2x bi-moon text-secondary' : 'bi fa-2x bi-sun text-warning'}></i>
-                                </button>
-                            )}
-                            </ThemeContext.Consumer>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to={`/#`}><ShoppingCartOutlined /></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to={`/register`}>REGISTER</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-nowrap" to={`/login`} aria-disabled="true">SIGN IN</Link>
-                        </li>
-                    </ul>
-                    <form className='d-flex align-items-center'>
-                        <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
-                    </form>
-                    <div className='mx-2'>
-                        <div id="google_translate_element"></div>
-                    </div>
-                </div>
+import { useWindowDimensions } from '../utils/windowUtils';
+
+export default function Navbar() {
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const [isBarOpen, setIsBarOpen] = useState(false);
+  const { width } = useWindowDimensions();
+
+  return (
+    <nav id='main-navbar'>
+      {/* <div className='navbar-top-area'>
+        20% OFF with code 'BLVCKVDAY20' at checkout.
+      </div> */}
+      {isSearchBarOpen ? (
+        <Searchbar setIsSearchBarOpen={setIsSearchBarOpen} />
+      ) : (
+        <>
+          <div className='navbar-mid-area'>
+            <div className='navbar-icons'>
+              {width > 576 ? (
+                <>
+                  <a
+                    href='https://www.instagram.com/craftsmen_gdsc/'
+                    className='navbar-icons-styling'
+                  >
+                    <i class='fab fa-instagram'></i>
+                  </a>
+                  <a
+                    href='https://github.com/Craftsmen-GDSC/'
+                    className='navbar-icons-styling'
+                  >
+                    <i class='fab fa-github'></i>
+                  </a>
+
+                  <a href='#!' className='navbar-icons-styling'>
+                    <i class='fab fa-facebook-square'></i>
+                  </a>
+
+                  <a href='#!' className='navbar-icons-styling'>
+                    <i class='fab fa-twitter'></i>
+                  </a>
+                </>
+              ) : (
+                <>
+                  {isBarOpen ? (
+                    <a
+                      href='#!'
+                      className='navbar-icons-styling'
+                      onClick={() => setIsBarOpen(false)}
+                    >
+                      <i class='fas fa-times'></i>
+                    </a>
+                  ) : (
+                    <a
+                      href='#!'
+                      className='navbar-icons-styling'
+                      onClick={() => setIsBarOpen(true)}
+                    >
+                      <i class='fas fa-bars'></i>
+                    </a>
+                  )}
+
+                  <a
+                    href='#!'
+                    className='navbar-icons-styling'
+                    onClick={() => setIsSearchBarOpen(true)}
+                  >
+                    <i class='fas fa-search'></i>
+                  </a>
+                </>
+              )}
             </div>
-        </nav>
-    )
-}
+            <div>
+              {/* <h5 className='navbar-mid-heading'>CRAFTSMEN</h5> */}
+              <img style={{ width: '4rem' }} src={logo} alt='Craftsmen Logo' />
+            </div>
+            <div>
+              <div className='navbar-icons'>
+                <a href='#!' className='navbar-icons-styling'>
+                  <i class='far fa-user'></i>
+                </a>
 
-export default Navbar
+                {width > 576 && (
+                  <a
+                    href='#!'
+                    className='navbar-icons-styling'
+                    onClick={() => setIsSearchBarOpen(true)}
+                  >
+                    <i class='fas fa-search'></i>
+                  </a>
+                )}
+
+                <a href='#!' className='navbar-icons-styling'>
+                  <i class='fas fa-shopping-cart'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {width > 576 && (
+            <div className='navbar-bottom-area'>
+              <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>MEN</div>
+              </div>
+              <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>WOMEN</div>
+              </div>
+              <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>ACCESSORIES</div>
+              </div>
+              <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>HOME</div>
+              </div>
+            </div>
+          )}
+          {isBarOpen ? <Sidebar setIsBarOpen={setIsBarOpen} /> : <></>}
+        </>
+      )}
+    </nav>
+  );
+}
