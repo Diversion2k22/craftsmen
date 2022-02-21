@@ -1,5 +1,7 @@
 body {
   font-family: 'Times New Roman', Times, serif;
+  background-color: #22272e;
+  color: #adbac7;
 }
 
 .nav1 {
@@ -52,42 +54,6 @@ body {
   align-items: flex-start;
 }
 
-.galleryCard {
-  position: relative;
-  width: 350px;
-  background-color: #f5fbfd;
-}
-
-.galleryCard img {
-  width: 100%;
-  height: 300px;
-}
-
-.circle {
-  border-radius: 50%;
-  background-color: white;
-}
-
-.icon {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-}
-
-.over {
-  visibility: hidden;
-}
-
-.circle:hover .over {
-  visibility: visible;
-  background-color: rgb(133, 131, 131, 0.3);
-}
-
-.circle:hover .icon {
-  border: 1px solid white;
-  background-color: white;
-}
-
 #newsletter h1 {
   font-size: 5rem;
 }
@@ -113,8 +79,8 @@ body {
 }
 
 .white-content {
-  background-color: black;
-  color: white;
+  background-color: #22272e;
+  color: #adbac7;
 }
 
 .goog-te-gadget > span {

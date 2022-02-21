@@ -1,0 +1,163 @@
+.galleryCard {
+    position: relative;
+    width: 310px;
+    background-color: #f5fbfd;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 #adbac7, 0 6px 20px 0 #adbac7
+}
+  
+.galleryCard img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px 10px 15px 15px !important;
+    background-color: rgb(116, 114, 114);
+}
+
+.image-container {
+    position: relative
+}
+
+.discount {
+    background-color: red;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #fff
+}
+
+.wishlist {
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.first {
+    position: absolute;
+    width: 100%;
+    padding: 9px
+}
+
+.dress-name {
+    font-size: 18px;
+    font-weight: bold;
+    width: 75%
+}
+
+.new-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: red
+}
+
+.old-price {
+    font-size: 12px;
+    font-weight: bold;
+    color: grey
+}
+
+.colorBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 8px
+}
+
+.creme {
+    background-color: #fff;
+    border: 2px solid grey
+}
+
+.creme:hover {
+    border: 4px solid grey
+}
+
+.creme:focus {
+    background-color: grey
+}
+
+.red {
+    background-color: #fff;
+    border: 2px solid red
+}
+
+.red:hover {
+    border: 4px solid red
+}
+
+.red:focus {
+    background-color: red
+}
+
+.blue {
+    background-color: #fff;
+    border: 2px solid #40C4FF
+}
+
+.blue:hover {
+    border: 4px solid #40C4FF
+}
+
+.blue:focus {
+    background-color: #40C4FF
+}
+
+.darkblue {
+    background-color: #fff;
+    border: 2px solid #01579B
+}
+
+.darkblue:hover {
+    border: 4px solid #01579B
+}
+
+.darkblue:focus {
+    background-color: #01579B
+}
+
+.yellow {
+    background-color: #fff;
+    border: 2px solid #FFCA28
+}
+
+.yellow:hover {
+    border-radius: 4px solid #FFCA28
+}
+
+.yellow:focus {
+    background-color: #FFCA28
+}
+
+.item-size {
+    background: #fff;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.rating-star {
+    font-size: 10px !important
+}
+
+.rating-number {
+    font-size: 16px;
+    color: grey
+}
+
+.buy {
+    font-size: 16px;
+    color: purple;
+    font-weight: 500
+}
