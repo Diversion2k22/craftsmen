@@ -1,0 +1,37 @@
+.navbar-searchbar {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  gap: 2rem;
+  border-top: 1px solid #333;
+}
+.navbar-icons-styling {
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar-icons-styling:link,
+.navbar-icons-styling:visited {
+  color: #fff;
+}
+.navbar-icons-styling:hover,
+.navbar-icons-styling:active {
+  color: #868e96;
+}
+
+input {
+  width: 60%;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+textarea,
+input {
+  outline: none;
+}
+::placeholder {
+  color: white;
+}
