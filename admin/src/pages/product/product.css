@@ -1,12 +1,14 @@
 .product {
   flex: 4;
   padding: 20px;
+  background-color: #0a0d12;
 }
 
 .productTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #a17134;
 }
 
 .productAddButton {
@@ -51,10 +53,12 @@
 
 .productName {
   font-weight: 600;
+  color: white;
 }
 
 .productInfoBottom {
   margin-top: 10px;
+  color: white;
 }
 
 .productInfoItem {

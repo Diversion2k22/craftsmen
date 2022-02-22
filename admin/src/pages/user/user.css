@@ -1,6 +1,7 @@
 .user {
   flex: 4;
   padding: 20px;
+  background-color: #0a0d12;
 }
 
 .userTitleContainer {
@@ -60,10 +61,12 @@
 
 .userShowUsername {
   font-weight: 600;
+  color: white;
 }
 
 .userShowUserTitle {
   font-weight: 300;
+  color: white;
 }
 
 .userShowBottom{
@@ -94,6 +97,7 @@
 .userUpdateTitle{
     font-size: 24px;
     font-weight: 600;
+    color: white;
 }
 
 .userUpdateForm{
@@ -106,6 +110,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    color: white;
 }
 
 .userUpdateItem>label{
@@ -151,4 +156,8 @@
     background-color: darkblue;
     color: white;
     font-weight: 600;
+}
+
+.userTitle{
+  color: #a17134;
 }

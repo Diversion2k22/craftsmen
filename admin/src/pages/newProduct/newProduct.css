@@ -1,5 +1,11 @@
 .newProduct {
   flex: 4;
+  background-color: #0a0d12;
+  padding-left: 1rem;
+}
+
+.addProductTitle{
+  color: #a17314;
 }
 
 .addProductForm {
@@ -32,7 +38,7 @@
   padding: 7px 10px;
   border: none;
   border-radius: 10px;
-  background-color: darkblue;
+  background-color: #a17134;
   color: white;
   font-weight: 600;
   cursor: pointer;

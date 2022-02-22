@@ -8,6 +8,7 @@
 .widgetLgTitle {
   font-size: 22px;
   font-weight: 600;
+  color: #a17134;
 }
 
 .widgetLgTable{
@@ -17,12 +18,14 @@
 
 .widgetLgTh{
   text-align: left;
+  color: white;
 }
 
 .widgetLgUser{
   display: flex;
   align-items: center;
   font-weight: 600;
+  color: grey;
 }
 
 .widgetLgImg {
@@ -35,6 +38,7 @@
 
 .widgetLgDate,.widgetLgAmount{
   font-weight: 300;
+  color: grey;
 }
 
 .widgetLgButton {
