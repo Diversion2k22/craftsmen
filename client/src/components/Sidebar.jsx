@@ -52,11 +52,17 @@ export default function Sidebar() {
           >
             <i class='fab fa-github'></i>
           </a>
-          <a href='#!' className='sidebar-icons-styling'>
+          <a
+            href='https://www.facebook.com/craftsmen.gdsc.iem/'
+            className='sidebar-icons-styling'
+          >
             <i class='fab fa-facebook-square'></i>
           </a>
 
-          <a href='#!' className='sidebar-icons-styling'>
+          <a
+            href='https://twitter.com/CraftsmanO/'
+            className='sidebar-icons-styling'
+          >
             <i class='fab fa-twitter'></i>
           </a>
         </div>

@@ -158,20 +158,29 @@ export default function App() {
             </div>
 
             <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <i className='fas fa-home me-3'></i> India, Kolkata
-              </p>
-              <p>
-                <i className='fas fa-envelope me-3'></i>
-                craftsmangdsc@gmail.com
-              </p>
-              <p>
-                <i className='fas fa-phone me-3'></i> + 01 234 567 88
-              </p>
-              <p>
-                <i className='fas fa-print me-3'></i> + 01 234 567 89
-              </p>
+              <h6 className='text-uppercase fw-bold mb-4 d-flex align-items-center justify-content-center'>
+                Contact
+              </h6>
+              <div className='d-flex justify-content-center align-items-center mb-3'>
+                <i className='fas fa-home me-2'></i>
+                <p className='d-flex justify-content-center align-items-center mb-0'>
+                  &nbsp;India, Kolkata
+                </p>
+              </div>
+              <div className='d-flex justify-content-center align-items-center mb-3'>
+                <i className='fas fa-envelope me-2'></i>
+                <p className='d-flex justify-content-center align-items-center mb-0'>
+                  &nbsp;craftsmangdsc@gmail.com
+                </p>
+              </div>
+              <div className='d-flex justify-content-center'>
+                <i className='fas fa-phone me-3'></i>
+                <p>+ 01 234 567 88</p>
+              </div>
+              <div className='d-flex justify-content-center'>
+                <i className='fas fa-print me-3'></i>
+                <p>+ 01 234 567 89</p>
+              </div>
             </div>
           </div>
         </div>
