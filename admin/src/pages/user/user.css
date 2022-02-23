@@ -14,7 +14,7 @@
   width: 80px;
   border: none;
   padding: 5px;
-  background-color: teal;
+  background-color: #a17134;
   border-radius: 5px;
   cursor: pointer;
   color: white;
@@ -153,7 +153,7 @@
     border: none;
     padding: 5px;
     cursor: pointer;
-    background-color: darkblue;
+    background-color: #a17134;
     color: white;
     font-weight: 600;
 }

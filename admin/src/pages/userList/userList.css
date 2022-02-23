@@ -1,6 +1,6 @@
 .userList {
   flex: 4;
-  background-color: #0a0d12;
+  background-color: grey;
 }
 
 .userListUser {
@@ -20,13 +20,13 @@
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
-    background-color: #3bb077;
+    background-color: #a17134;
     color: white;
     cursor: pointer;
     margin-right: 20px;
 }
 
 .userListDelete{
-    color: red;
+    color: gold;
     cursor: pointer;
 }

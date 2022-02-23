@@ -13,7 +13,11 @@ export default function ProductList() {
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { 
+      field: "id", 
+      headerName: "ID", 
+      width: 90,
+    },
     {
       field: "product",
       headerName: "Product",
@@ -27,7 +31,11 @@ export default function ProductList() {
         );
       },
     },
-    { field: "stock", headerName: "Stock", width: 200 },
+    { 
+      field: "stock", 
+      headerName: "Stock", 
+      width: 200 , 
+    },
     {
       field: "status",
       headerName: "Status",

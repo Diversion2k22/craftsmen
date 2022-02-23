@@ -16,7 +16,7 @@ export default function Topbar() {
           </div>
           <div className="topbarIconContainer">
             <Language />
-            <span className="topIconBadge">2</span>
+            <span className="topIconBadge">1</span>
           </div>
           <div className="topbarIconContainer">
             <Settings />
