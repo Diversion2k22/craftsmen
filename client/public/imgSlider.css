@@ -1,73 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 .carousel-hero,
 .carousel-inner {
-    height: 80vh;
+  height: 80vh;
 }
 
 .carousel-hero .carousel-item {
-    padding: 50px;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  padding: 50px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .white {
-    color: #333;
+  color: #333;
 }
 
-nav, p {
-    font-family: Poppins, 'PT Mono', monospace;
-    font-size: 1.2em;
+nav,
+p {
+  font-family: 'Poppins', 'PT Mono', monospace;
+  font-size: 1rem;
 }
 
 .navbar-wrapper {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
-.carousel-item>div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 10px;
+.carousel-item > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .carousel-caption h1 {
-    font-family: 'Merienda', cursive;
-    font-size: 3.7rem;
-    font-weight: 700;
-    color: #FFF;
-    text-transform:capitalize;
+  font-family: 'Merienda', cursive;
+  font-size: 3.7rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
 }
 
 .carousel-caption h3 {
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFF;
-    /* text-transform: uppercase; */
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  /* text-transform: uppercase; */
 }
 
 .carousel-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgb(45, 60, 60);
-    opacity: 0.5;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(45, 60, 60);
+  opacity: 0.5;
 }
 
 .slider-btns .btn {
-    background-color: rgb(161, 129, 38);
-    color: white;
-    border: none;
-    font-family: 'Montserrat', sans-serif;;
-    font-weight: 700;
-    padding: 1rem 1.8rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
+  background-color: #a18126;
+  background-color: rgb(161, 129, 38);
+  color: white;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 1rem 1.8rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.btn-1:active,
+.btn-1:hover {
+  background-color: #917422;
+  color: white;
 }

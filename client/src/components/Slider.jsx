@@ -21,7 +21,7 @@ const Slider = () => {
             />
           ))}
         </div>
-        <div className='carousel-inner h-100'>
+        <div className='carousel-inner h-100 mb-5'>
           {sliderItems.map((item) => (
             <div
               key={item.id}
@@ -29,14 +29,14 @@ const Slider = () => {
               style={{ backgroundImage: `url(${item.img})` }}
             >
               <div className='carousel-caption my-auto text-center '>
-                <h1 className='hero-headline white text-center'>
-                  {item.title}
+                <h1 className='hero-headline white'>
+                  <div className='d-flex align-items-center justify-content-center'>
+                    {item.title}
+                  </div>
                 </h1>
                 <h3 className='hero-subhead white text-center'>{item.desc}</h3>
                 <div className='slider-btns mt-4'>
-                  <button className='btn btn-1 btn-primary btn-lg'>
-                    Shop Now
-                  </button>
+                  <button className='btn btn-1 btn-lg'>Shop Now</button>
                 </div>
               </div>
             </div>

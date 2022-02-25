@@ -37,11 +37,17 @@ export default function Navbar() {
                     <i class='fab fa-github'></i>
                   </a>
 
-                  <a href='#!' className='navbar-icons-styling'>
+                  <a
+                    href='https://www.facebook.com/craftsmen.gdsc.iem/'
+                    className='navbar-icons-styling'
+                  >
                     <i class='fab fa-facebook-square'></i>
                   </a>
 
-                  <a href='#!' className='navbar-icons-styling'>
+                  <a
+                    href='https://twitter.com/CraftsmanO/'
+                    className='navbar-icons-styling'
+                  >
                     <i class='fab fa-twitter'></i>
                   </a>
                 </>
@@ -104,6 +110,9 @@ export default function Navbar() {
           {width > 576 && (
             <div className='navbar-bottom-area'>
               <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>HOME</div>
+              </div>
+              <div className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>MEN</div>
               </div>
               <div className='navbar-menu-item-container'>
@@ -111,9 +120,6 @@ export default function Navbar() {
               </div>
               <div className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>ACCESSORIES</div>
-              </div>
-              <div className='navbar-menu-item-container'>
-                <div className='navbar-menu-items'>HOME</div>
               </div>
             </div>
           )}
