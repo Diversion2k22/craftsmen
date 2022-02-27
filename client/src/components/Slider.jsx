@@ -1,5 +1,6 @@
 import React from 'react';
 import { sliderItems } from '../data';
+import './Slider.css';
 
 const Slider = () => {
   return (

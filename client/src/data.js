@@ -56,11 +56,11 @@ export const categories = [{
   export const popularProducts = [
     {
       id:1,
-      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMxkGYxAgQERRcRiPshe-5daa3faLG6i6EQ&usqp=CAU",
+      img:"https://freepngimg.com/thumb/dress%20shirt/4-black-dress-shirt-png-image.png",
     },
     {
       id:2,
-      img:"https://previews.123rf.com/images/urfingus/urfingus1512/urfingus151200212/49516478-blue-men-s-jeans-in-motion-isolated-on-white-background.jpg",
+      img:"https://freepngimg.com/thumb/dress%20shirt/21-dress-shirt-png-image.png",
     },
     {
       id:3,
@@ -80,7 +80,7 @@ export const categories = [{
     },
     {
       id:7,
-      img:"http://assets.stickpng.com/images/585680404f6ae202fedf26f0.png",
+      img:"https://freepngimg.com/thumb/dress/33276-7-striped-dress-image.png",
     },
     {
       id:8,
