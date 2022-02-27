@@ -1,5 +1,5 @@
-import React from 'react';
-import './productList.css';
+import React from 'react'
+import './productList.css'
 
 const ProductItem = ({item}) => {
     return (
@@ -21,13 +21,13 @@ const ProductItem = ({item}) => {
                         <span class="wishlist"><i class="text-danger fa fa-heart"></i></span>
                     </div>
                 </div>
-                <img src={item.img} class="img-fluid" alt='cinque Terre' />
+                <img src={item.image.url} class="img-fluid" alt='cinque Terre' />
             </div>
             <div class="product-detail-container p-2">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="dress-name">White traditional long dress</h5>
+                    <h5 class="dress-name">{item.name}</h5>
                     <div class="d-flex flex-column mb-2">
-                        <span class="new-price">$3.99</span> <small class="old-price text-right">$5.99</small> 
+                        <span class="new-price">{item.price.formatted_with_symbol}</span> 
                     </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center pt-1">
