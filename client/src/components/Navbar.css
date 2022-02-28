@@ -1,6 +1,6 @@
 /* <i class="fa-solid fa-bars"></i> */
-#main-navbar {
-  background-color: #000;
+#main-navbar-solid {
+  background-color: #121013;
   color: #fff;
   position: fixed;
   top: 0;
@@ -8,6 +8,18 @@
   right: 0;
   z-index: 5;
 }
+
+#main-navbar-transparent {
+  background-color: transparent;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+
 
 .navbar-top-area {
   text-align: center;
@@ -20,7 +32,7 @@
   align-items: center;
 }
 
-.navbar-mid-area {
+.navbar-mid-area-solid {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +40,15 @@
   border-top: 1px solid #333;
   border-bottom: 0.01rem solid #333;
 }
+
+.navbar-mid-area-transparent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid #333;
+}
+
 .navbar-icons {
   display: flex;
   justify-content: space-around;

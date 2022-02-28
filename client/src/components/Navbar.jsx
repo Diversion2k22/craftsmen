@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Searchbar from './Searchbar';
 import Sidebar from './Sidebar';
+import {Link} from 'react-router-dom';
 import './Navbar.css';
 import logo from '../assets/logo.png';
 
@@ -9,18 +10,33 @@ import { useWindowDimensions } from '../utils/windowUtils';
 export default function Navbar() {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isBarOpen, setIsBarOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
   const { width } = useWindowDimensions();
 
+  const navScroll = () =>{
+    var scroll = window.scrollY;
+    if(scroll >= 100){
+      setIsScroll(true);
+    }
+    else{
+      setIsScroll(false);
+    }
+  };
+
+  useEffect(() => {
+       navScroll();
+  },[])
+
+  window.addEventListener('scroll', navScroll);
+  
+
   return (
-    <nav id='main-navbar'>
-      {/* <div className='navbar-top-area'>
-        20% OFF with code 'BLVCKVDAY20' at checkout.
-      </div> */}
+    <nav id={isScroll?"main-navbar-solid": "main-navbar-transparent"} >
       {isSearchBarOpen ? (
         <Searchbar setIsSearchBarOpen={setIsSearchBarOpen} />
       ) : (
         <>
-          <div className='navbar-mid-area'>
+          <div className={isScroll?'navbar-mid-area-solid':'navbar-mid-area-transparent'}>
             <div className='navbar-icons'>
               {width > 576 ? (
                 <>
@@ -83,7 +99,7 @@ export default function Navbar() {
             </div>
             <div>
               {/* <h5 className='navbar-mid-heading'>CRAFTSMEN</h5> */}
-              <img style={{ width: '4rem' }} src={logo} alt='Craftsmen Logo' />
+            <Link to='/'>  <img style={{ width: '4rem' }} src={logo} alt='Craftsmen Logo' /> </Link>
             </div>
             <div>
               <div className='navbar-icons'>
@@ -110,9 +126,6 @@ export default function Navbar() {
           {width > 576 && (
             <div className='navbar-bottom-area'>
               <div className='navbar-menu-item-container'>
-                <div className='navbar-menu-items'>HOME</div>
-              </div>
-              <div className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>MEN</div>
               </div>
               <div className='navbar-menu-item-container'>
@@ -120,6 +133,9 @@ export default function Navbar() {
               </div>
               <div className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>ACCESSORIES</div>
+              </div>
+              <div className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>HOME</div>
               </div>
             </div>
           )}

@@ -4,7 +4,7 @@ import './Slider.css';
 
 const Slider = () => {
   return (
-    <section className='hero carousel-hero mt-5'>
+    <section className='hero carousel-hero '>
       <div
         id='homeHerocarousel'
         className='carousel slide carousel-fade'
