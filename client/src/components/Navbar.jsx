@@ -44,27 +44,27 @@ export default function Navbar() {
                     href='https://www.instagram.com/craftsmen_gdsc/'
                     className='navbar-icons-styling'
                   >
-                    <i class='fab fa-instagram'></i>
+                    <i className='fab fa-instagram'></i>
                   </a>
                   <a
                     href='https://github.com/Craftsmen-GDSC/'
                     className='navbar-icons-styling'
                   >
-                    <i class='fab fa-github'></i>
+                    <i className='fab fa-github'></i>
                   </a>
 
                   <a
                     href='https://www.facebook.com/craftsmen.gdsc.iem/'
                     className='navbar-icons-styling'
                   >
-                    <i class='fab fa-facebook-square'></i>
+                    <i className='fab fa-facebook-square'></i>
                   </a>
 
                   <a
                     href='https://twitter.com/CraftsmanO/'
                     className='navbar-icons-styling'
                   >
-                    <i class='fab fa-twitter'></i>
+                    <i className='fab fa-twitter'></i>
                   </a>
                 </>
               ) : (
@@ -75,7 +75,7 @@ export default function Navbar() {
                       className='navbar-icons-styling'
                       onClick={() => setIsBarOpen(false)}
                     >
-                      <i class='fas fa-times'></i>
+                      <i className='fas fa-times'></i>
                     </a>
                   ) : (
                     <a
@@ -83,7 +83,7 @@ export default function Navbar() {
                       className='navbar-icons-styling'
                       onClick={() => setIsBarOpen(true)}
                     >
-                      <i class='fas fa-bars'></i>
+                      <i className='fas fa-bars'></i>
                     </a>
                   )}
 
@@ -92,7 +92,7 @@ export default function Navbar() {
                     className='navbar-icons-styling'
                     onClick={() => setIsSearchBarOpen(true)}
                   >
-                    <i class='fas fa-search'></i>
+                    <i className='fas fa-search'></i>
                   </a>
                 </>
               )}
@@ -104,7 +104,7 @@ export default function Navbar() {
             <div>
               <div className='navbar-icons'>
                 <a href='#!' className='navbar-icons-styling'>
-                  <i class='far fa-user'></i>
+                  <i className='far fa-user'></i>
                 </a>
 
                 {width > 576 && (
@@ -113,12 +113,12 @@ export default function Navbar() {
                     className='navbar-icons-styling'
                     onClick={() => setIsSearchBarOpen(true)}
                   >
-                    <i class='fas fa-search'></i>
+                    <i className='fas fa-search'></i>
                   </a>
                 )}
 
                 <a href='#!' className='navbar-icons-styling'>
-                  <i class='fas fa-shopping-cart'></i>
+                  <i className='fas fa-shopping-cart'></i>
                 </a>
               </div>
             </div>
