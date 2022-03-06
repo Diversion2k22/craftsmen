@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const PUBLISHABLE_KEY=process.env.PUBLISHABLE_KEY
 const SECRET_KEY=process.env.SECRET_KEY
 const stripe = require('stripe')(SECRET_KEY);
@@ -10,8 +9,8 @@ router.post('/payment', function(req, res){
 
     stripe.customers.create({ 
         email: req.body.stripeEmail, 
-        source: req.body.stripeToken, 
         name: req.body.name, 
+        source: req.body.stripeToken, 
         address: { 
             line1: req.body.address, 
             postal_code: req.body.pincode, 
@@ -25,11 +24,12 @@ router.post('/payment', function(req, res){
         return stripe.charges.create({ 
             amount: req.body.amount,    // Charing Rs 25 
             description: req.body.product, 
-            currency: 'INR', 
-            customer: customer.id 
+            currency: 'inr', 
+            customer: customer.id ,
+            description: 'Thank you for shopping with Us'
         }); 
     }) 
-    .then((charge) => { 
+    .then(() => { 
         res.send("Success") // If no error occurs 
     }) 
     .catch((err) => { 
