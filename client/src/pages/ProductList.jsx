@@ -1,15 +1,15 @@
 import Navbar from "../components/Navbar";
-// import Announcement from "../components/Announcement";
 import Products from "../components/Products";
-import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+// import React, { useState, useEffect } from 'react';
+import './ProductList.css';
 
 const ProductList = () => {
+  // const val = true;
   return (
     <div>
-      {/* <Announcement /> */}
-      <Navbar val={true}/>
-      <div className="container-fluid">
+      <Navbar val={true} />
+      <div className="container-fluid margin-class mt-5">
         <h1 className="mb-5 mt-3">Dresses</h1>
         <div className="d-sm-flex justify-content-between">
           <div className="d-flex justify-content-start align-items-center">
@@ -50,7 +50,6 @@ const ProductList = () => {
         </div>
       </div>
       <Products />
-      <Newsletter />
       <Footer />
     </div>
   );
