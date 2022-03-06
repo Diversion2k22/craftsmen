@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Announcement from "../components/Announcement";
+// import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 const ProductList = () => {
   return (
     <div>
-      <Announcement />
-      <Navbar />
+      {/* <Announcement /> */}
+      <Navbar val={true}/>
       <div className="container-fluid">
         <h1 className="mb-5 mt-3">Dresses</h1>
         <div className="d-sm-flex justify-content-between">

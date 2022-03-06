@@ -71,7 +71,7 @@ const Product = () => {
   console.log(id);
   return (
     <>
-      <Navbar />
+      <Navbar val={true}/>
       <section style={{ marginTop: "8.7rem" }}>
       <ProductDetails id={id} />
       </section>

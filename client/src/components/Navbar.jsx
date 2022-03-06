@@ -7,9 +7,11 @@ import logo from '../assets/logo.png';
 
 import { useWindowDimensions } from '../utils/windowUtils';
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isBarOpen, setIsBarOpen] = useState(false);
+  // const value = props.val;
+  // console.log(props.val);
   const [isScroll, setIsScroll] = useState(false);
   const { width } = useWindowDimensions();
 
@@ -20,12 +22,13 @@ export default function Navbar() {
     }
     else{
       setIsScroll(false);
+      setIsScroll(props.val);
     }
   };
 
   useEffect(() => {
        navScroll();
-  },[])
+  })
 
   window.addEventListener('scroll', navScroll);
   
@@ -44,27 +47,27 @@ export default function Navbar() {
                     href='https://www.instagram.com/craftsmen_gdsc/'
                     className='navbar-icons-styling'
                   >
-                    <i className='fab fa-instagram'></i>
+                    <i class='fab fa-instagram'></i>
                   </a>
                   <a
                     href='https://github.com/Craftsmen-GDSC/'
                     className='navbar-icons-styling'
                   >
-                    <i className='fab fa-github'></i>
+                    <i class='fab fa-github'></i>
                   </a>
 
                   <a
                     href='https://www.facebook.com/craftsmen.gdsc.iem/'
                     className='navbar-icons-styling'
                   >
-                    <i className='fab fa-facebook-square'></i>
+                    <i class='fab fa-facebook-square'></i>
                   </a>
 
                   <a
                     href='https://twitter.com/CraftsmanO/'
                     className='navbar-icons-styling'
                   >
-                    <i className='fab fa-twitter'></i>
+                    <i class='fab fa-twitter'></i>
                   </a>
                 </>
               ) : (
@@ -75,7 +78,7 @@ export default function Navbar() {
                       className='navbar-icons-styling'
                       onClick={() => setIsBarOpen(false)}
                     >
-                      <i className='fas fa-times'></i>
+                      <i class='fas fa-times'></i>
                     </a>
                   ) : (
                     <a
@@ -83,7 +86,7 @@ export default function Navbar() {
                       className='navbar-icons-styling'
                       onClick={() => setIsBarOpen(true)}
                     >
-                      <i className='fas fa-bars'></i>
+                      <i class='fas fa-bars'></i>
                     </a>
                   )}
 
@@ -92,19 +95,19 @@ export default function Navbar() {
                     className='navbar-icons-styling'
                     onClick={() => setIsSearchBarOpen(true)}
                   >
-                    <i className='fas fa-search'></i>
+                    <i class='fas fa-search'></i>
                   </a>
                 </>
               )}
             </div>
             <div>
               {/* <h5 className='navbar-mid-heading'>CRAFTSMEN</h5> */}
-            <Link to='/'>  <img style={{ width: '4rem' }} src={logo} alt='Craftsmen Logo' /> </Link>
+            <Link to='/'>  <img style={{ width: '4rem', filter:'contrast(100%)' }} src={logo} alt='Craftsmen Logo' /> </Link>
             </div>
             <div>
               <div className='navbar-icons'>
                 <a href='#!' className='navbar-icons-styling'>
-                  <i className='far fa-user'></i>
+                  <i class='far fa-user'></i>
                 </a>
 
                 {width > 576 && (
@@ -113,12 +116,12 @@ export default function Navbar() {
                     className='navbar-icons-styling'
                     onClick={() => setIsSearchBarOpen(true)}
                   >
-                    <i className='fas fa-search'></i>
+                    <i class='fas fa-search'></i>
                   </a>
                 )}
 
                 <a href='#!' className='navbar-icons-styling'>
-                  <i className='fas fa-shopping-cart'></i>
+                  <i class='fas fa-shopping-cart'></i>
                 </a>
               </div>
             </div>
