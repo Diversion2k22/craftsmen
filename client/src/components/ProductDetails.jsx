@@ -1,367 +1,72 @@
-import React, { useState } from "react";
-import "./ProductDetails.css";
-import { products } from "../data";
+import React from 'react';
+import './ProductDetails.css'
 
-const ProductDetails = ({ id }) => {
-  const [vol, setVol] = useState(0);
-  const [size, setSize] = useState(0);
-
-  const prod = products.find((p) => {
-    return p.id === Number(id);
-  });
-  console.log(prod);
-
-  if (!prod) {
-    return (
-      <div className="container w-90 mt-5">
-        <h1 className="alert alert-danger text-center">
-          Error 404: NOT FOUND !!!
-        </h1>
-      </div>
-    );
-  }
-
-  //   const sizeChoices = [...Array(prod.maxQuantity).keys()];
-  let expanded_Category = "";
-  prod.category.forEach((item) => {
-    expanded_Category += item + " > ";
-  });
-  console.log(expanded_Category);
-
-  let avgRating = 0,
-    reviewCount = prod.reviews.length;
-  prod.reviews.forEach((item) => {
-    avgRating += item.rating;
-  });
-  avgRating = avgRating / reviewCount;
-  avgRating = avgRating.toFixed(1);
-
-  let { markpr, sellpr } = prod.prices,
-    discount = undefined;
-  if (markpr != sellpr) {
-    discount = Math.round(((markpr - sellpr) * 100) / markpr);
-  }
+const ProductDetails = () => {
 
   return (
-    <div className="cardcontainer">
-      <div className="row p-1">
-        <div className="d-block col-12 p-3 p-lg-2 col-lg-6 col-xxl-5">
-          {/* Left Column containing the Product Image and Buttons*/}
-          <div className="prodImgSection">
-            {/* Product IMAGE */}
-            <div className="prodImgCard d-flex justify-content-center px-2 py-3">
-              {/* Sqaure Image  */}
-              <img src={prod.img} alt={prod.name} />
+    <div className='container mt-5 py-5'>
+      <div className="row">
+        <div className="col-md-6 px-5 py-3">
+          <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            {/* 'Add to Cart' and 'Buy Now' Buttons */}
-            <div className="prod-cart-buy-btns">
-              <a href="#" type="button" className="btn btn-cart ">
-                <i className="fas fa-cart-plus" />
-                <span>Add to Cart</span>
-              </a>
-              <a
-                href="#"
-                type="button"
-                className="btn btn-buy align-content-center"
-              >
-                <i className="fas fa-credit-card" />
-                Buy Now
-              </a>
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img src="https://secure.img1-fg.wfcdn.com/im/68895127/c_crop_resize_zoom-h624-w900%5Ecompr-r85/8649/86494397/default_name.jpg" className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src="https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg" className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/white-female-shoes-on-feet-royalty-free-image-912581410-1563805834.jpg?crop=1.00xw:0.752xh;0,0.127xh&resize=1200:*" className="d-block w-100" alt="..." />
+              </div>
             </div>
           </div>
         </div>
-        {/* Right Column containing the Product Details */}
-        <div className="prodDetails col-12 col-lg-6 col-xxl-7">
-          <div className="card p-3">
-            {/* Category + Share Link */}
-            <p className="text-muted my-1 d-flex justify-content-between">
-              <span className="category">
-                {/* Home &gt; Beauty &amp; Grooming &gt; VILLAIN Hydra Perfume */}
-                {"Home > " + expanded_Category.slice(0, -2)}
-              </span>
-              <span
-                id="copyLink"
-                onClick={() => {
-                  navigator.clipboard.writeText(window.location.href);
-                  alert("Link to this Page Copied Successfully!!");
-                }}
-              >
-                <i className="fas fa-share-square">Share</i>
-              </span>
-            </p>
-            {/* Product Title */}
-            <h2>{prod.name}</h2>
-            {/* Product Stars & Rating Stats */}
-            <section className="rating-section">
-              <span className="text-muted">
-                <span className="badge bg-success">
-                  <span>{avgRating}</span>
-                  <i className="fas fa-star" />
-                </span>
-                &nbsp; {prod.ratingCount} Ratings &amp; {reviewCount} Reviews
-              </span>
-              {prod.isAssured ? (
-                <span className="badge rounded-pill mx-2 assureBtn">
-                  <i className="fas fa-thumbs-up" /> Assured
-                </span>
-              ) : (
-                <></>
-              )}
-            </section>
-
-            {/* Price Section */}
-            <section id="prices">
-              <h1 className="sp">
-                <i className="fas fa-rupee-sign" />
-                {prod.prices.sellpr}
-              </h1>
-              &nbsp;
-              {discount ? (
-                <>
-                  <span className="mp text-muted">
-                    <del>
-                      <i className="fas fa-rupee-sign" />
-                      {prod.prices.markpr}
-                    </del>
-                  </span>
-                  <span className="text-success">{`${discount}% off`}</span>
-                </>
-              ) : (
-                <></>
-              )}
-            </section>
-            {/* Offers */}
-            <section id="offers" className="mt-4">
-              <h6 className="fw-bold">Available Offers</h6>
-              <ul>
-                {prod.offers.map((o) => (
-                  <li>{o}</li>
-                ))}
-              </ul>
-            </section>
-
-            {/* specs Table */}
-
-            {"volumeList" in prod ? (
-              <>
-                <div className="row my-1">
-                  <div className="col-3 d-flex justify-content-center align-items-center">
-                    Volume
-                  </div>
-                  <div className="col-9">
-                    {prod.volumeList.map((item, index) => {
-                      console.log(item, vol === index);
-                      return (
-                        <button
-                          className={`${
-                            vol === index ? "selectbtn" : "selectbtn-outline"
-                          } mx-1`}
-                          onClick={() => setVol(index)}
-                        >{`${item}ml`}</button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-
-            {"sizeList" in prod ? (
-              <>
-                <div className="row my-1">
-                  <div className="col-3 d-flex justify-content-center align-items-center">
-                    Size
-                  </div>
-                  <div className="col-9">
-                    {prod.sizeList.map((item, index) => {
-                      return (
-                        <button
-                          className={`${
-                            size === index ? "selectbtn" : "selectbtn-outline"
-                          } mx-1`}
-                          onClick={() => setSize(index)}
-                        >
-                          {item}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-
-            <div className="row buyQuantity m-1">
-              <div className="col-3 d-flex justify-content-center align-items-center">
-                Quantity
-              </div>
-              <div className="col-5">
-                <input
-                  type="number"
-                  min={1}
-                  max={prod.maxQuantity}
-                  defaultValue={1}
-                />
-              </div>
+        <div className="col-md-6">
+          <h1>Down Comforter</h1>
+          <span className='text-muted'>Includes 1 down comforter</span>
+          <div className='hr1 mt-4 w-100 d-flex justify-content-between align-items-center'>
+            <h1>$ 349</h1>
+            <div>{[...Array(5)].map(()=>(<i className="fa fa-star"></i>))}<span>1,293 Reviews</span></div>
+          </div>
+          <div className='hr1 mt-4'>
+            <div className='w-100 d-flex justify-content-between align-items-center'>
+              <span>WEIGHT</span><span>What's the difference?</span>
             </div>
-
-            <div className="row my-1">
-              <div className="col-3 d-flex justify-content-center align-items-start">
-                Highlights
-              </div>
-              <div className="col-9">
-                <ul>
-                  {prod.highlights.map((o) => (
-                    <li>{o}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="row mt-2 mb-1">
-              <div className="col-3 d-flex justify-content-center align-items-start">
-                Services
-              </div>
-              <div className="col-9">
-                <ul>
-                  {prod.services.map((o) => (
-                    <li>{o}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="row my-1">
-              <div className="col-3 d-flex justify-content-center align-items-start">
-                Description
-              </div>
-              <div className="col-9">{prod.desc}</div>
-            </div>
-
-            <div className="row my-2">
-              <div className="col-3 d-flex justify-content-center align-items-start">
-                Expiry Date
-              </div>
-              <div className="col-9">{prod.expiryDate}</div>
+            <div className='mt-3 d-flex justify-content-around'>
+              <button className='bt2 px-4'>All-Season</button>
+              <button className='bt1 px-4'>Lightweight</button>
             </div>
           </div>
-
-          {/* Ratings & Reviews */}
-          <section className="reviews-section card p-3 my-3">
-            {/* Header Row */}
-            <div className="row text-center d-flex align-items-center">
-              <h4 className="col-3 fw-bold">Ratings &amp; Reviews</h4>
-
-              <section className="rating-section col-5">
-                <span className="text-muted">
-                  <span className="badge bg-success">
-                    <span>{avgRating}</span>
-                    <i className="fas fa-star" />
-                  </span>
-                  &nbsp; {prod.ratingCount} Ratings &amp; {reviewCount} Reviews
-                </span>
-              </section>
-
-              <div className="col-4">
-                <button className="selectbtn text-uppercase py-2">
-                  Rate Product
-                </button>
-              </div>
+          <div className='hr1 mt-4'>
+            <div className='w-100 d-flex justify-content-between align-items-center'>
+              <span>Size</span><span>Size Guide</span>
             </div>
-            <hr className="mb-3" />
-
-            {/* Reviews Start Here */}
-            {prod.reviews.map((rev, index) => {
-              return index <= 3 ? (
-                <article className="review p-4">
-                  <div>
-                    <span className="badge bg-success">
-                      <span>{rev.rating}</span>
-                      <i className="fas fa-star" />
-                    </span>
-                    &nbsp; {rev.desc}
-                  </div>
-                  <div className="mt-3">
-                    <div className="row d-inline-block">
-                      <span className="text-muted fw-bold">{rev.userName}</span>
-                      <span className="text-muted">{rev.dateofReview}</span>
-                    </div>
-                    <div className="row text-muted">
-                      <span>
-                        <i className="fas fa-check-circle mx-1" />
-                        {rev.isCertified ? "Certified Buyer, " : "New Buyer, "}
-                        {rev.userCity}
-                      </span>
-                    </div>
-                  </div>
-                  <hr className="my-2" />
-                </article>
-              ) : (
-                ""
-              );
-            })}
-
-            <div id="moreReviews">
-              {prod.reviews.map((rev, index) => {
-                return index > 3 ? (
-                  <article className="review p-4">
-                    <div>
-                      <span className="badge bg-success">
-                        <span>{rev.rating}</span>
-                        <i className="fas fa-star" />
-                      </span>
-                      &nbsp; {rev.desc}
-                    </div>
-                    <div className="mt-3">
-                      <div className="row d-inline-block">
-                        <span className="text-muted fw-bold">
-                          {rev.userName}
-                        </span>
-                        <span className="text-muted">{rev.dateofReview}</span>
-                      </div>
-                      <div className="row text-muted">
-                        <span>
-                          <i className="fas fa-check-circle mx-1" />
-                          {rev.isCertified
-                            ? "Certified Buyer, hh"
-                            : "New Buyer, hh"}{" "}
-                          {rev.userCity}
-                        </span>
-                      </div>
-                    </div>
-                    <hr className="my-2" />
-                  </article>
-                ) : (
-                  ""
-                );
-              })}
+            <div className='mt-3 d-flex justify-content-around'>
+              <button className='bt2 px-4'>Full/Queen</button>
+              <button className='bt1 px-4'>King/Cal King</button>
+              <button className='bt1 px-4'>Twin/Twin XL</button>
             </div>
-
-            <a
-              type="button"
-              className="text-dark fw-bolder text-decoration-none mt-3"
-              onClick={(e) => {
-                var moreRev = document.getElementById("moreReviews");
-                console.log(moreRev);
-
-                if (moreRev.style.display === "none") {
-                  moreRev.style.display = "block";
-                  e.target.innerHTML = "See Less >";
-                } else {
-                  moreRev.style.display = "none";
-                  e.target.innerHTML = "See More Reviews >";
-                }
-              }}
-            >
-              See More Reviews &gt;
-            </a>
-          </section>
+          </div>
+          <div className='mt-4 w-100'>
+            <div className='d-flex justify-content-around w-100'>
+              <select className='px-4'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <button className='py-2 px-4 bt2'>Add to Cart</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails
