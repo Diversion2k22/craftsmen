@@ -10,6 +10,7 @@ const ProductDetails = ({ id }) => {
   const prod = products.find((p) => {
     return p.id === Number(id);
   });
+  console.log(prod);
 
   if (!prod) {
     return (
@@ -26,6 +27,7 @@ const ProductDetails = ({ id }) => {
   prod.category.forEach((item) => {
     expanded_Category += item + " > ";
   });
+  console.log(expanded_Category);
 
   let avgRating = 0,
     reviewCount = prod.reviews.length;
@@ -112,6 +114,12 @@ const ProductDetails = ({ id }) => {
               <h1 className="sp text-danger">
                 <i className="fas fa-rupee-sign" />
                 {prod.prices.sellpr.toFixed(2)}
+
+            {/* Price Section */}
+            <section id="prices">
+              <h1 className="sp">
+                <i className="fas fa-rupee-sign" />
+                {prod.prices.sellpr}
               </h1>
               &nbsp;
               {discount ? (
@@ -120,6 +128,7 @@ const ProductDetails = ({ id }) => {
                     <del>
                       <i className="fas fa-rupee-sign" />
                       {prod.prices.markpr.toFixed(2)}
+                      {prod.prices.markpr}
                     </del>
                   </span>
                   <span className="text-success">{`${discount}% off`}</span>
@@ -129,6 +138,18 @@ const ProductDetails = ({ id }) => {
               )}
             </section>
 
+            {/* Offers */}
+            <section id="offers" className="mt-4">
+              <h6 className="fw-bold">Available Offers</h6>
+              <ul>
+                {prod.offers.map((o) => (
+                  <li>{o}</li>
+                ))}
+              </ul>
+            </section>
+
+            {/* specs Table */}
+
             {"volumeList" in prod ? (
               <>
                 <div className="row my-1">
@@ -137,6 +158,12 @@ const ProductDetails = ({ id }) => {
                   </div>
                   <div className="col-10">
                     {prod.volumeList.map((item, index) => {
+                  <div className="col-3 d-flex justify-content-center align-items-center">
+                    Volume
+                  </div>
+                  <div className="col-9">
+                    {prod.volumeList.map((item, index) => {
+                      console.log(item, vol === index);
                       return (
                         <button
                           className={`${
@@ -160,6 +187,10 @@ const ProductDetails = ({ id }) => {
                     Size
                   </div>
                   <div className="col-10">
+                  <div className="col-3 d-flex justify-content-center align-items-center">
+                    Size
+                  </div>
+                  <div className="col-9">
                     {prod.sizeList.map((item, index) => {
                       return (
                         <button
@@ -184,6 +215,10 @@ const ProductDetails = ({ id }) => {
                 Quantity
               </div>
               <div className="col-5 col-lg-3">
+              <div className="col-3 d-flex justify-content-center align-items-center">
+                Quantity
+              </div>
+              <div className="col-5">
                 <input
                   type="number"
                   min={1}
@@ -198,6 +233,11 @@ const ProductDetails = ({ id }) => {
                 Highlights
               </div>
               <div className="col-10">
+            <div className="row my-1">
+              <div className="col-3 d-flex justify-content-center align-items-start">
+                Highlights
+              </div>
+              <div className="col-9">
                 <ul>
                   {prod.highlights.map((o) => (
                     <li>{o}</li>
@@ -211,6 +251,11 @@ const ProductDetails = ({ id }) => {
                 Services
               </div>
               <div className="col-10">
+            <div className="row mt-2 mb-1">
+              <div className="col-3 d-flex justify-content-center align-items-start">
+                Services
+              </div>
+              <div className="col-9">
                 <ul>
                   {prod.services.map((o) => (
                     <li>{o}</li>
@@ -231,6 +276,17 @@ const ProductDetails = ({ id }) => {
                 Expiry Date
               </div>
               <div className="col-10">{prod.expiryDate}</div>
+              <div className="col-3 d-flex justify-content-center align-items-start">
+                Description
+              </div>
+              <div className="col-9">{prod.desc}</div>
+            </div>
+
+            <div className="row my-2">
+              <div className="col-3 d-flex justify-content-center align-items-start">
+                Expiry Date
+              </div>
+              <div className="col-9">{prod.expiryDate}</div>
             </div>
           </div>
 
@@ -262,6 +318,40 @@ const ProductDetails = ({ id }) => {
               {/* Reviews Start Here */}
               {prod.reviews.map((rev, index) => {
                 return index < maxReviewsDisp ? (
+            {/* Reviews Start Here */}
+            {prod.reviews.map((rev, index) => {
+              return index <= 3 ? (
+                <article className="review p-4">
+                  <div>
+                    <span className="badge bg-success">
+                      <span>{rev.rating}</span>
+                      <i className="fas fa-star" />
+                    </span>
+                    &nbsp; {rev.desc}
+                  </div>
+                  <div className="mt-3">
+                    <div className="row d-inline-block">
+                      <span className="text-muted fw-bold">{rev.userName}</span>
+                      <span className="text-muted">{rev.dateofReview}</span>
+                    </div>
+                    <div className="row text-muted">
+                      <span>
+                        <i className="fas fa-check-circle mx-1" />
+                        {rev.isCertified ? "Certified Buyer, " : "New Buyer, "}
+                        {rev.userCity}
+                      </span>
+                    </div>
+                  </div>
+                  <hr className="my-2" />
+                </article>
+              ) : (
+                ""
+              );
+            })}
+
+            <div id="moreReviews">
+              {prod.reviews.map((rev, index) => {
+                return index > 3 ? (
                   <article className="review p-4">
                     <div>
                       <span className="badge bg-success">
@@ -283,6 +373,8 @@ const ProductDetails = ({ id }) => {
                           {rev.isCertified
                             ? "Certified Buyer, "
                             : "New Buyer, "}
+                            ? "Certified Buyer, hh"
+                            : "New Buyer, hh"}{" "}
                           {rev.userCity}
                         </span>
                       </div>
@@ -293,6 +385,7 @@ const ProductDetails = ({ id }) => {
                   ""
                 );
               })}
+
 
               <div id="moreReviews">
                 {prod.reviews.map((rev, index) => {
@@ -330,11 +423,16 @@ const ProductDetails = ({ id }) => {
                 })}
               </div>
             </section>
+            </div>
+
+
             <a
               type="button"
               className="text-dark fw-bolder text-decoration-none mt-3"
               onClick={(e) => {
                 var moreRev = document.getElementById("moreReviews");
+
+                console.log(moreRev);
 
                 if (moreRev.style.display === "none") {
                   moreRev.style.display = "block";

@@ -7,9 +7,11 @@ import logo from '../assets/logo.png';
 
 import { useWindowDimensions } from '../utils/windowUtils';
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isBarOpen, setIsBarOpen] = useState(false);
+  // const value = props.val;
+  // console.log(props.val);
   const [isScroll, setIsScroll] = useState(false);
   const { width } = useWindowDimensions();
 
@@ -20,12 +22,13 @@ export default function Navbar() {
     }
     else{
       setIsScroll(false);
+      setIsScroll(props.val);
     }
   };
 
   useEffect(() => {
        navScroll();
-  },[])
+  })
 
   window.addEventListener('scroll', navScroll);
   
@@ -99,7 +102,7 @@ export default function Navbar() {
             </div>
             <div>
               {/* <h5 className='navbar-mid-heading'>CRAFTSMEN</h5> */}
-            <Link to='/'>  <img style={{ width: '4rem' }} src={logo} alt='Craftsmen Logo' /> </Link>
+            <Link to='/'>  <img style={{ width: '4rem', filter:'contrast(100%)' }} src={logo} alt='Craftsmen Logo' /> </Link>
             </div>
             <div>
               <div className='navbar-icons'>

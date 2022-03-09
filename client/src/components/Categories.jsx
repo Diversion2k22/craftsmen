@@ -8,6 +8,7 @@ const Categories = () => {
       className='w-100 d-sm-flex justify-content-around px-2'
       style={{
         marginTop: '8rem',
+        marginBottom: '4rem'
       }}
     >
       {categories.map((item) => (

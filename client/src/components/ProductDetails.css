@@ -33,6 +33,7 @@
 .prodImgCard img {
   /* width: 90%; */
   height: 65vh;
+  height: 60vh;
   transition: 0.8s all ease-in-out;
 }
 

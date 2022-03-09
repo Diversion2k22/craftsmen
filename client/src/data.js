@@ -56,6 +56,45 @@ export const products = [
       },
     ],
 
+
+    category: ["Beauty & Grooming", "VILLAIN Hydra Perfume"],
+    name: "VILLAIN Hydra Perfume Eau de Parfum - 20 ml (For Men)",
+    ratingCount: 4081,
+    reviews: [
+      {
+        rating: 5,
+        desc: "Such a nice perfume, the fragrance is great and long lasting. This product was suggested by a friend which turned up extremely good. Now I have suggested to my connections. Loved it !!",
+        userName: "Anupam Sharma",
+        dateofReview: "Aug, 2021",
+        userCity: "Gwalior",
+        isCertified: true,
+      },
+      {
+        rating: 4.7,
+        desc: "Such a nice perfume, the fragrance is great and long lasting. This product was suggested by a friend which turned up extremely good. Now I have suggested to my connections. Loved it !!",
+        userName: "Anupam Sharma",
+        dateofReview: "Aug, 2021",
+        userCity: "Gwalior",
+        isCertified: true,
+      },
+      {
+        rating: 4.7,
+        desc: "Such a nice perfume, the fragrance is great and long lasting. This product was suggested by a friend which turned up extremely good. Now I have suggested to my connections. Loved it !!",
+        userName: "Anupam Sharma",
+        dateofReview: "Aug, 2021",
+        userCity: "Gwalior",
+        isCertified: true,
+      },
+      {
+        rating: 4.2,
+        desc: "Such a nice perfume, the fragrance is great and long lasting. This product was suggested by a friend which turned up extremely good. Now I have suggested to my connections. Loved it !!",
+        userName: "Anupam Sharma",
+        dateofReview: "Aug, 2021",
+        userCity: "Gwalior",
+        isCertified: true,
+      },
+    ],
+
     isAssured: true,
     prices: { markpr: 499, sellpr: 356 },
     offers: [
@@ -72,6 +111,7 @@ export const products = [
     ],
     services: ["No Returns Applicable", "Cash on Delivery available"],
     desc: "WHEN THE ENERGIES OF THE OCEAN MEET THE FRESHNESS OF CITRUS, A LETHAL VILLAIN IN BORN. GET READY FOR ACTION WITH THE STRONG, MASCULINE FRAGRANCE OF VILLAIN HYDRA. ITS INTENSE AQUATIC NOTES WITH HINTS OF WHITE MUSK KEEP YOU READY FOR THE HUSTLE",
+    desc: "WHEN THE ENERGIES OF THE OCEAN MEET THE FRESHNESS OF CITRUS, A LETHAL VILLAIN IN BORN. GET READY FOR ACTION WITH THE STRONG, MASCULINE FRAGRANCE OF VILLAIN HYDRA. ITS INTENSE AQUATIC NOTES WITH HINTS OF WHITE MUSK KEEP YOU READY FOR THE HUSTLE, WHILE THE ZESTY FRAGRANCE OF FRESH BERGAMOT, LEMON AND PATCHOULI LET YOUR UNPREDICTABILITY AND EXCITEMENT SHINE. PROUD, POWERFUL AND UNIQUE, THE MACHO SCENT OF VILLAIN HYDRA IS MADE FOR THE REBEL IN YOU WHO KNOWS HOW TO GO OUT STRONG AND MAKE IT LAST FOR LONG",
     expiryDate: "21 Sep, 2023",
   },
   {
@@ -84,6 +124,11 @@ export const products = [
       "Master Cook Sparkle Z2",
     ],
     name: "MASTER COOK SPARKLE Z2 BLUE 4 Container Lunch Box (1600 ml)",
+      "Kitchen Cookware & ServeWare",
+      "LunchBoxes",
+      "Master Cook Sparkle Z2",
+    ],
+    name: "MASTER COOK SPARKLE Z 2 BLUE 4 Containers Lunch Box  (1600 ml)",
     ratingCount: 34,
     reviews: [
       {

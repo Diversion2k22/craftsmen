@@ -1,12 +1,13 @@
 /* <i class="fa-solid fa-bars"></i> */
 #main-navbar-solid {
-  background-color: #121013;
+  background-color: #000;
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
+  margin-bottom: 20rem !important;
 }
 
 #main-navbar-transparent {
@@ -85,10 +86,10 @@
 }
 .navbar-menu-item-container {
   padding: 0.6rem;
-  border-bottom: 2px solid #000;
+  /* border-bottom: 2px solid; */
 }
 .navbar-menu-item-container:hover {
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   cursor: pointer;
 }
 .navbar-menu-items {
