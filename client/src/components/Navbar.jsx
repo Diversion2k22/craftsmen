@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Badge } from "@material-ui/core";
 import Searchbar from './Searchbar';
 import Sidebar from './Sidebar';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
+import { ShoppingCartOutlined } from "@material-ui/icons";
+import { useSelector } from "react-redux";
 import logo from '../assets/logo.png';
 
 import { useWindowDimensions } from '../utils/windowUtils';
 
 export default function Navbar(props) {
+  const quantity = useSelector(state=>state.cart.quantity);
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isBarOpen, setIsBarOpen] = useState(false);
   // const value = props.val;
@@ -120,9 +124,11 @@ export default function Navbar(props) {
                   </a>
                 )}
 
-                <a href='#!' className='navbar-icons-styling'>
-                  <i class='fas fa-shopping-cart'></i>
-                </a>
+                  <Link to="/cart" style={{color: 'white'}}>
+                    <Badge badgeContent={quantity} color="primary">
+                      <ShoppingCartOutlined/>
+                    </Badge>
+                  </Link>
               </div>
             </div>
           </div>
