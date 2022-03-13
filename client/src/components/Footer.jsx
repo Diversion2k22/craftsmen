@@ -6,7 +6,7 @@ export default function App() {
     <MDBFooter
       className='text-center text-lg-start text-muted text-white'
       style={{
-        fontFamily: 'Merienda, Montaga, serif',
+        // fontFamily: 'Merienda, Montaga, serif',
         backgroundColor: '#000',
       }}
     >

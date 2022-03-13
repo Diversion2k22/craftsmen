@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Badge } from "@material-ui/core";
+import { Badge } from '@material-ui/core';
 import Searchbar from './Searchbar';
 import Sidebar from './Sidebar';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { ShoppingCartOutlined } from "@material-ui/icons";
-import { useSelector } from "react-redux";
+import { ShoppingCartOutlined } from '@material-ui/icons';
+import { useSelector } from 'react-redux';
 import logo from '../assets/logo.png';
 
 import { useWindowDimensions } from '../utils/windowUtils';
 
 export default function Navbar(props) {
-  const quantity = useSelector(state=>state.cart.quantity);
+  const quantity = useSelector((state) => state.cart.quantity);
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isBarOpen, setIsBarOpen] = useState(false);
   // const value = props.val;
@@ -19,31 +19,33 @@ export default function Navbar(props) {
   const [isScroll, setIsScroll] = useState(false);
   const { width } = useWindowDimensions();
 
-  const navScroll = () =>{
+  const navScroll = () => {
     var scroll = window.scrollY;
-    if(scroll >= 100){
+    if (scroll >= 100) {
       setIsScroll(true);
-    }
-    else{
+    } else {
       setIsScroll(false);
       setIsScroll(props.val);
     }
   };
 
   useEffect(() => {
-       navScroll();
-  })
+    navScroll();
+  });
 
   window.addEventListener('scroll', navScroll);
-  
 
   return (
-    <nav id={isScroll?"main-navbar-solid": "main-navbar-transparent"} >
+    <nav id={isScroll ? 'main-navbar-solid' : 'main-navbar-transparent'}>
       {isSearchBarOpen ? (
         <Searchbar setIsSearchBarOpen={setIsSearchBarOpen} />
       ) : (
         <>
-          <div className={isScroll?'navbar-mid-area-solid':'navbar-mid-area-transparent'}>
+          <div
+            className={
+              isScroll ? 'navbar-mid-area-solid' : 'navbar-mid-area-transparent'
+            }
+          >
             <div className='navbar-icons'>
               {width > 576 ? (
                 <>
@@ -106,7 +108,13 @@ export default function Navbar(props) {
             </div>
             <div>
               {/* <h5 className='navbar-mid-heading'>CRAFTSMEN</h5> */}
-            <Link to='/'>  <img style={{ width: '4rem', filter:'contrast(100%)' }} src={logo} alt='Craftsmen Logo' /> </Link>
+              <Link to='/'>
+                <img
+                  style={{ width: '3.5rem', filter: 'contrast(100%)' }}
+                  src={logo}
+                  alt='Craftsmen Logo'
+                />
+              </Link>
             </div>
             <div>
               <div className='navbar-icons'>
@@ -124,11 +132,11 @@ export default function Navbar(props) {
                   </a>
                 )}
 
-                  <Link to="/cart" style={{color: 'white'}}>
-                    <Badge badgeContent={quantity} color="primary">
-                      <ShoppingCartOutlined/>
-                    </Badge>
-                  </Link>
+                <Link to='/cart' style={{ color: 'white' }}>
+                  <Badge badgeContent={quantity} color='primary'>
+                    <ShoppingCartOutlined />
+                  </Badge>
+                </Link>
               </div>
             </div>
           </div>
