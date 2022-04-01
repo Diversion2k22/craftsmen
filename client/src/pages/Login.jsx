@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { login } from '../redux/apiCalls';
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 const myStyle = {
   background: `linear-gradient(
@@ -16,7 +19,21 @@ const removeOutline = {
   boxShadow: 'none',
   width: '80%',
 };
+
+const Error = styled.span`
+  color: red;
+`;
+
 export default function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+
+  const handleClick = (e)=>{
+    e.preventDefault();
+    login(dispatch, {username, password});
+  }
   return (
     <div className='container-fluid' style={myStyle}>
       <div className='row justify-content-center pt-5'>
@@ -34,6 +51,7 @@ export default function Login() {
                     placeholder='username'
                     id='username'
                     style={removeOutline}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </div>
                 <div className='d-flex justify-content-center my-4'>
@@ -43,12 +61,16 @@ export default function Login() {
                     className='form-control border border-dark p-2'
                     id='password'
                     style={removeOutline}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <div className='d-flex justify-content-center'>
-                  <button type='submit' className='btn btn-success w-50'>
+                  <button type='submit' className='btn btn-success w-50'
+                    onClick={handleClick} disabled={isFetching}
+                  >
                     Login
                   </button>
+                  {error && <Error>Something went wrong...</Error>}
                 </div>
                 <div className='d-flex justify-content-center my-4'>
                   <a href='https://www.google.com/'> Forgot Password</a>

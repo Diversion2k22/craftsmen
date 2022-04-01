@@ -122,7 +122,7 @@ export default function Navbar(props) {
             </div>
             <div>
               <div className='navbar-icons'>
-                <a href='#!' className='navbar-icons-styling'>
+                <a href='/login' className='navbar-icons-styling'>
                   <i className='far fa-user'></i>
                 </a>
 

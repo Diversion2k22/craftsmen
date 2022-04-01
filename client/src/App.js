@@ -7,9 +7,10 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const user = false;
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <BrowserRouter>
       <Switch>
