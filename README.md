@@ -64,14 +64,12 @@ Thanks goes to these wonderful people
 <table>
   <tr>
     <td align="center"><a href="https://github.com/rohan26062001"><img src="https://avatars.githubusercontent.com/u/74822378?v=4" width="100px;" alt=""/><br /><sub><b>Rohan</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/ShravanSeth"><img src="https://avatars.githubusercontent.com/u/64133116?v=4" width="100px;" alt=""/><br /><sub><b>Shravan</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/SBasu-7870"><img src="https://avatars.githubusercontent.com/u/51238137?v=4" width="100px;" alt=""/><br /><sub><b>Subhrodeep</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/iamroHit12"><img src="https://avatars.githubusercontent.com/u/72003474?v=4" width="100px;" alt=""/><br /><sub><b>Rohit</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/kanisht09"><img src="https://avatars.githubusercontent.com/u/55939035?v=4" width="100px;" alt=""/><br /><sub><b>Kanisht</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/aritrasen2121"><img src="https://avatars.githubusercontent.com/u/78583922?v=4" width="100px;" alt=""/><br /><sub><b>Aritra</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/SBasu-7870"><img src="https://avatars.githubusercontent.com/u/51238137?v=4" width="100px;" alt=""/><br /><sub><b>Subhrodeep</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Rahul-Roy-21"><img src="https://avatars.githubusercontent.com/u/86934009?v=4" width="100px;" alt=""/><br /><sub><b>Rahul</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/HimaghnaDas"><img src="https://avatars.githubusercontent.com/u/92687480?v=4" width="100px;" alt=""/><br /><sub><b>Himaghna</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Vivek-kumar21"><img src="https://avatars.githubusercontent.com/u/92684075?v=4" width="100px;" alt=""/><br /><sub><b>Vivek</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/aritrasen2121"><img src="https://avatars.githubusercontent.com/u/78583922?v=4" width="100px;" alt=""/><br /><sub><b>Aritra</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/iamroHit12"><img src="https://avatars.githubusercontent.com/u/72003474?v=4" width="100px;" alt=""/><br /><sub><b>Rohit</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ShravanSeth"><img src="https://avatars.githubusercontent.com/u/64133116?v=4" width="100px;" alt=""/><br /><sub><b>Shravan</b></sub></a><br /></td>
   </tr>
 </table>
 
