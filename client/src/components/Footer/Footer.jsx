@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 export default function App() {
   return (
     <MDBFooter
@@ -10,10 +10,7 @@ export default function App() {
         backgroundColor: '#000',
       }}
     >
-      <section
-        className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'
-        style={{ backgroundColor: '' }}
-      >
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block text-white'>
           <span>Get connected with us on social networks :</span>
         </div>
