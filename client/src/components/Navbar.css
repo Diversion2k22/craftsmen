@@ -78,12 +78,16 @@
 }
 .navbar-menu-item-container {
   padding: 0.6rem;
+  color: white;
+  font-weight: 300;
   border-bottom: 3px solid transparent;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .navbar-menu-item-container:hover {
   border-bottom: 3px solid white;
+  color: white;
+  font-weight: 300;
   cursor: pointer;
 }
 .navbar-menu-items {

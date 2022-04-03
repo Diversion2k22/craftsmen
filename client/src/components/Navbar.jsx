@@ -153,18 +153,18 @@ export default function Navbar(props) {
           </div>
           {width > 576 && (
             <div className='navbar-bottom-area'>
-              <div className='navbar-menu-item-container'>
+              <a href="/products/men" className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>MEN</div>
-              </div>
-              <div className='navbar-menu-item-container'>
+              </a>
+              <a href="/products/women" className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>WOMEN</div>
-              </div>
-              <div className='navbar-menu-item-container'>
-                <div className='navbar-menu-items'>ACCESSORIES</div>
-              </div>
-              <div className='navbar-menu-item-container'>
+              </a>
+              <a href="/products/baby" className='navbar-menu-item-container'>
+                <div className='navbar-menu-items'>BABY</div>
+              </a>
+              <a href="/" className='navbar-menu-item-container'>
                 <div className='navbar-menu-items'>HOME</div>
-              </div>
+              </a>
             </div>
           )}
           {isBarOpen ? <Sidebar setIsBarOpen={setIsBarOpen} /> : <></>}

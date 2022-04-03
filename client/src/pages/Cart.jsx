@@ -62,8 +62,8 @@ const Cart = () => {
 
     const options = {
       key: 'rzp_test_2mEWpuhzlIO1sv',
-      name: "avdojo",
-      description: "avodojo",
+      name: "Craftsmen",
+      description: "Craftsmen",
       order_id: data.id,
       handler: async (response) => {
         try {
@@ -104,15 +104,15 @@ const Cart = () => {
       <Navbar val={true} />
       <div className="w-100 text-center mt-3"><h1 className="fw-bold text-uppercase">your bag</h1></div>
       <div className="mt-5 container-fluid d-flex justify-content-between shop">
-        <button className="me-auto p-1 p-sm-2 bg-dark text-white fw-bold">CONTINUE SHOPPING</button>
+        <button className="me-auto p-1 p-sm-2 bg-dark text-white fw-bold"><a style={{color:'white'}} href="/">CONTINUE SHOPPING</a></button>
         <button className="ms-auto p-1 p-sm-2 bg-dark text-white fw-bold">CHECKOUT NOW</button>
       </div>
-      <div className="row w-100 mt-5 mb-5">
+      <div className="row w-100 mt-5 mb-5 px-4">
         <div className="col-md-8">
           {cart.products.map((product) => (
             <div className="d-flex justify-content-between align-items-center mt-4">
               <img className="w-25" src={product.img} alt="" />
-              <div>
+              <div className="p-2">
                 <h5>
                   <b>Product:</b> {product.title}
                 </h5>
