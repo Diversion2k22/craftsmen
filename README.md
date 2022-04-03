@@ -5,7 +5,6 @@
 
 ![GitHub forks](https://img.shields.io/github/forks/Diversion2k22/craftsmen?style=social)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Diversion2k22/craftsmen?color=red&style=social)
-![Lines of code](https://img.shields.io/tokei/lines/github/Diversion2k22/craftsmen?color=red&label=Lines%20of%20Code)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Diversion2k22/craftsmen?style=normal)
 ![License](https://img.shields.io/bower/l/react?color=green)
 ![Stars](https://img.shields.io/github/stars/Diversion2k22/craftsmen?style=flat&logo=github)
@@ -16,6 +15,10 @@
 
 <p align = "center">
     <img src="./client/src/assets/Craftsmen.png" />
+</p>
+
+<p align = "center">
+    ➡️ Website Link: <a href="https://craftsmen.netlify.app/">Link</a>
 </p>
 
 <br>
