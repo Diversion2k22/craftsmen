@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@material-ui/core';
-import Searchbar from './Searchbar';
-import Sidebar from './Sidebar';
+import Searchbar from '../Searchbar/Searchbar';
+import Sidebar from '../Sidebar/Sidebar';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { ShoppingCartOutlined } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
-import { useWindowDimensions } from '../utils/windowUtils';
+import { useWindowDimensions } from '../../utils/windowUtils';
 
 export default function Navbar(props) {
   const quantity = useSelector((state) => state.cart.quantity);

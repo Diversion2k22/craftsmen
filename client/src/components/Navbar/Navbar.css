@@ -81,7 +81,6 @@
   border-bottom: 3px solid transparent;
   transition: all 0.3s;
 }
-
 .navbar-menu-item-container:hover {
   border-bottom: 3px solid white;
   cursor: pointer;

@@ -1,11 +1,11 @@
 // import "./ProductDetails.css";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { publicRequest } from '../requestMethods';
+import { publicRequest } from '../../requestMethods';
 import { Add, Remove } from '@material-ui/icons';
 import styled from 'styled-components';
-import { mobile } from '../responsive';
-import { addProduct } from '../redux/cartRedux';
+import { mobile } from '../../responsive';
+import { addProduct } from '../../redux/cartRedux';
 import { useDispatch } from 'react-redux';
 // import { products } from "../data";
 
